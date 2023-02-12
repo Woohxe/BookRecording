@@ -3,6 +3,16 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const config = require('../config')
 
+// 查询所有书籍
+exports.bookAll = (req, res) => {
+    const sql = `select * from books order by bookId desc`
+    db.query(sql, (err, results) => {
+        if (err) return res.status(400).json(err)
+        if (results.length === 0) return res.status(200).json('查无数据')
+        res.json(results)
+    })
+}
+
 // 注册用户的处理函数
 exports.register = (req, res) => {
     const adminInfo = req.body
