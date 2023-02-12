@@ -4,7 +4,7 @@ Vue3 + express + mysql
 书籍书评在线管理系统
 目前已实现登录注册与书籍书评的新增改查功能，后续再补充功能
 
-前端
+# 前端
 ## Project setup
 ```
 npm install
@@ -15,7 +15,7 @@ npm install
 npm run serve
 ```
 
-后端
+# 后端
 ## Project setup
 ```
 cd server
